@@ -1,12 +1,74 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    margin: 20px auto;
+    width: 500px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    background-color: azure;
+    border: 1px solid rgb(47, 114, 247);
+    border-radius: 5px;
+}
+.cart-container{
+    background-color: rgb(226, 250, 226);
+    border-radius: 5px;
+    padding: 10px;
+}
+#cart-items-list{
+    list-style: none;
+    
+}
+.total-amt-div{
+    padding: 10px;
+    color: rgb(5, 83, 14);
+    margin-block: 10px;
+    background-color: rgb(207, 245, 189);
+}
+#clear-all-cart{
+    background-color: greenyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border:none;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    width: 150px;
+}
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: rgb(233, 249, 210);
+    margin-block: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.item-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    align-items: center;
+}
+.update-btn, .remove-btn{
+    padding: 5px 8px;
+    background-color: green;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    cursor: pointer;
+}   
+.cluster{
+    display: flex;
+    align-items: center;
+}
+.amount-span{
+    background-color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
 }
