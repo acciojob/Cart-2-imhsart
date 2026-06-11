@@ -7,7 +7,7 @@ const CartItem = ({item}) => {
   return (
     <div className="cart-item">
       <h3>Item: {item.title}</h3>
-      <p id={`cart-item-price-${item.id}`}>Price: ₹{item.price}</p>
+      <p id={`cart-item-price-${item.id}`}>Price: ${item.price}</p>
       <div className="item-buttons">
         <div className="cluster">
           <button className="update-btn" id={`increment-btn-${item.id}`} onClick={() => dispatch({

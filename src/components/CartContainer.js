@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 
 const CartContainer = () => {
   const {state, dispatch} = useContext(CartContext)
-  let totalAmt = state.cart.reduce((s,val) => s+(val.quantity*val.price), 0)
+  let totalAmt = state.cart.reduce((s,val) => s+val.price, 0)
   return (
     <div className="cart-container">
       <h2 style={{marginBlock:'10px 15px'}}>Product List</h2>
@@ -16,7 +16,7 @@ const CartContainer = () => {
           })
         }
       </ul>)}
-      {state.cart.length ? <div className="total-amt-div">Total Amount: <span id="cart-total-amount">₹{totalAmt}</span></div> : <p style={{marginBlock:'10px'}}>Cart is currently empty</p>}
+      {state.cart.length ? <div className="total-amt-div">Total Amount: <span id="cart-total-amount">$ {totalAmt}</span></div> : <p style={{marginBlock:'10px'}}>Cart is currently empty</p>}
       <button id="clear-all-cart" onClick={() => dispatch({
         type: 'CLEAR_CART'
       })}>Clear Cart</button>
