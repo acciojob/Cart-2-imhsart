@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div>🛒 useReducer</div>
-      <div>Items: <span id="nav-cart-item-count">{totalItems}</span></div>
+      <div>Items: <span id="nav-cart-item-count">{totalItems-1}</span></div>
     </nav>
   )
 }
