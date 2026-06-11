@@ -12,12 +12,6 @@ const cartData = [
     quantity: 1
   },
   {
-    id: 3,
-    title: "USB-C Hub",
-    price: 1299,
-    quantity: 3
-  },
-  {
     id: 4,
     title: "Laptop Stand",
     price: 999,
