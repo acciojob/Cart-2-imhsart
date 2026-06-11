@@ -22,7 +22,7 @@ const CartItem = ({item}) => {
           })}>-</button>
         </div>
         <button className="remove-btn" id={`cart-item-remove-${item.id}`} onClick={() => dispatch({
-          type: 'REMOVE_ITEM',
+          type: 'DECREASE',
           payload: item.id
         })}>Remove</button>
       </div>
