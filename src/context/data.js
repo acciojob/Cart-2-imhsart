@@ -3,7 +3,7 @@ const cartData = [
     id: 1,
     title: "Wireless Mouse",
     price: 799,
-    quantity: 2
+    quantity: 1
   },
   {
     id: 2,
