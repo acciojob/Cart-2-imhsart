@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { CartContext } from "../context/cartContext.js";
+import { CartContext } from "../context/CartContext.js";
 
 const Navbar = () => {
   const {state} = useContext(CartContext)
