@@ -22,7 +22,7 @@ function cartReducer(state, action){
           if(i.quantity > 1){
             brr.push({...i,quantity: i.quantity-1})
           }else{
-            continue
+            brr.push(i)
           }
         }else{
           brr.push(i)

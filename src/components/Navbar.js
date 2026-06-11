@@ -4,7 +4,7 @@ import { CartContext } from "../context/CartContext.js";
 
 const Navbar = () => {
   const {state} = useContext(CartContext)
-  let totalItems = state.cart.length
+  let totalItems = state.cart.reduce((s, item) => s + item.quantity, 0)
   return (
     <nav className="navbar">
       <div>🛒 useReducer</div>
