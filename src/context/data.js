@@ -12,7 +12,7 @@ const cartData = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 3,
     title: "Laptop Stand",
     price: 999,
     quantity: 1

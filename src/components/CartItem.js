@@ -14,7 +14,7 @@ const CartItem = ({item}) => {
             type: 'INCREASE',
             payload: item.id
           })}>+</button>
-          <span className="amount-span" id={`cart-amount-${item.id}`}>{JSON.stringify(item)}</span>
+          <span className="amount-span" id={`cart-amount-${item.id}`}>{item.quantity}</span>
           <button className="update-btn" id={`decrement-btn-${item.id}`}
           onClick={() => dispatch({
             type: 'DECREASE',
