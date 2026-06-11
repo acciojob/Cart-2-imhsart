@@ -21,7 +21,7 @@ const CartItem = ({item}) => {
             payload: item.id
           })}>-</button>
         </div>
-        <button className="remove-btn" onClick={() => dispatch({
+        <button className="remove-btn" id={`cart-item-remove-${item.id}`} onClick={() => dispatch({
           type: 'REMOVE_ITEM',
           payload: item.id
         })}>Remove</button>

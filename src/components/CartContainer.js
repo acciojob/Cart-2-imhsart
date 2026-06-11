@@ -8,13 +8,14 @@ const CartContainer = () => {
   return (
     <div className="cart-container">
       <h2 style={{marginBlock:'10px 15px'}}>Product List</h2>
-      <ul id="cart-items-list">
+      {state.cart.length && (
+        <ul id="cart-items-list">
         {
           state.cart.map(item => {
             return <li key={item.id} ><CartItem item={item} /></li>
           })
         }
-      </ul>
+      </ul>)}
       {state.cart.length ? <div className="total-amt-div">Total Amount: <span id="cart-total-amount">₹{totalAmt}</span></div> : <p style={{marginBlock:'10px'}}>Cart is currently empty</p>}
       <button id="clear-all-cart" onClick={() => dispatch({
         type: 'CLEAR_CART'
