@@ -1,7 +1,8 @@
 function cartReducer(state, action){
+  let newCart
 
   switch(action.type){
-    case 'INCREASE':
+    case 'INCREASE': {
       let arr = []
       for(let i of state.cart){
         if(i.id === action.payload){
@@ -10,12 +11,11 @@ function cartReducer(state, action){
           arr.push(i)
         }
       }
-      return {
-        ...state,
-        cart: arr 
-      }
+      newCart = arr
+      break
+    }
 
-    case 'DECREASE':
+    case 'DECREASE': {
       let brr = []
       for(let i of state.cart){
         if(i.id === action.payload){
@@ -28,19 +28,26 @@ function cartReducer(state, action){
           brr.push(i)
         }
       }
-      return {
-        ...state,
-        cart: brr 
-      }
+      newCart = brr
+      break
+    }
 
     case 'REMOVE_ITEM':
-      return {...state,cart: state.cart.filter(val => val.id !== action.payload)}
+      newCart = state.cart.filter(val => val.id !== action.payload)
+      break
 
     case 'CLEAR_CART':
-      return {...state,cart: []}
+      newCart = []
+      break
 
     default:
       return state
+  }
+
+  return {
+    ...state,
+    cart: newCart,
+    log: [...state.log, `${action.type}(${action.payload}) -> ${JSON.stringify(newCart)}`]
   }
 }
 
