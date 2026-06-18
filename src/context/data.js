@@ -2,19 +2,19 @@ const cartData = [
   {
     id: 1,
     title: "Wireless Mouse",
-    price: 799,
+    price: 649.99,
     quantity: 1
   },
   {
     id: 2,
     title: "Mechanical Keyboard",
-    price: 2499,
+    price: 499.99,
     quantity: 1
   },
   {
     id: 3,
     title: "Laptop Stand",
-    price: 999,
+    price: 599.99,
     quantity: 1
   }
 ]

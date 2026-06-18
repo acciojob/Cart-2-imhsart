@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 
 const CartContainer = () => {
   const {state, dispatch} = useContext(CartContext)
-  let totalAmt = state.cart.reduce((s,val) => s+(val.quantity*val.price), 0)
+  let totalAmt = state.cart.reduce((s,val) => s+(val.quantity*val.price), 0).toFixed(2)
   return (
     <div className="cart-container">
       <h2 style={{marginBlock:'10px 15px'}}>Product List</h2>

@@ -4,8 +4,7 @@ export const CartContext = createContext()
 import cartData from "./data.js";
 
 const initialValue = {
-  cart: cartData,
-  log: []
+  cart: cartData
 }
 
 const CartProvider = ({children}) => {
